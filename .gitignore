@@ -1,3 +1,9 @@
+*.egg-info/
+build/
+dist/
+*~
+*.pyc
+__pycache__/
 vault_password.txt
 secret_vars.yml
 new_value.txt
