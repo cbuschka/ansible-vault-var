@@ -6,7 +6,7 @@ from ansible_vault_var import console
 from ansible_vault_var.tool import Tool
 
 
-def _parse_args(args):
+def parse_args(args):
   arg_parser = argparse.ArgumentParser(description="Manage encrypted vars in yaml file.")
   vault_password_source_group = arg_parser.add_mutually_exclusive_group(required=True)
   vault_password_source_group.add_argument('--vault-password-file', type=str, dest="vault_password_file",
@@ -52,7 +52,7 @@ def get_var(args, *, tool, console):
 
 
 def main():
-  args = _parse_args(sys.argv[1:])
+  args = parse_args(sys.argv[1:])
   tool = Tool(vault_password=args.vault_password,
               vault_password_file=args.vault_password_file)
   if args.subcommand == "get_var":
