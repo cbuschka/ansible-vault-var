@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-ansible = ">=4.5.0"
+ansible = ">=2.9.0"
 
 [dev-packages]
 bytesbufio = ">=1.0.3"
