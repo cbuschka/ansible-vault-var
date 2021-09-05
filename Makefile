@@ -10,8 +10,7 @@ init:
 
 install_deps:	init
 	@echo "Installing deps..."; \
-	#pipenv install requirements.txt
-	pipenv install --dev
+	pipenv install --dev -r requirements.txt -r requirements-dev.txt
 
 
 tests:	init

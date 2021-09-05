@@ -1,2 +1,1 @@
 ansible>=4.5.0
-bytesbufio>=1.0.3
