@@ -37,7 +37,5 @@ class Tool(object):
     if vault_password_file:
       with open(vault_password_file, 'r') as f:
         vault_password = f.read()
-    else:
-      vault_password = vault_password.encode('UTF-8')
 
     return VaultLib([(DEFAULT_VAULT_ID_MATCH, VaultSecret(vault_password.encode("UTF-8")))])

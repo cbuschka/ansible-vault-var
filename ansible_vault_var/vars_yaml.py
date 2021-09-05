@@ -34,5 +34,8 @@ def load_vars_yaml(vars_file):
 
 
 def save_vars_yaml(vars_dict, vars_file):
-  with open(vars_file, 'w') as f:
-    return yaml.dump(vars_dict, f)
+  if isinstance(vars_file, str):
+    with open(vars_file, 'w') as f:
+      yaml.dump(vars_dict, f)
+  else:
+    yaml.dump(vars_dict, vars_file)

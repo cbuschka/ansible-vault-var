@@ -6,5 +6,8 @@ name = "pypi"
 [packages]
 ansible = ">=4.5.0"
 
+[dev-packages]
+bytesbufio = ">=1.0.3"
+
 [requires]
 python_version = "3"

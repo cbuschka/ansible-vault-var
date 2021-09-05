@@ -1,7 +1,8 @@
 import argparse
+import os
 import sys
 
-import console
+from ansible_vault_var import console
 from ansible_vault_var.tool import Tool
 
 
@@ -29,7 +30,8 @@ def _parse_args(args):
 
 
 def set_var(args, *, tool, console):
-  tool.load_vars(vars_file=args.vars_file)
+  if os.path.isfile(args.vars_file):
+    tool.load_vars(vars_file=args.vars_file)
   if args.new_var_value:
     new_var_value = args.new_var_value
   else:
