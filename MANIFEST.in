@@ -1,0 +1,4 @@
+include readme.md license.txt requirements.txt
+recursive-include ansible_vault_var *.py
+recursive-include tests *.py
+global-exclude *.pyc __pycache__

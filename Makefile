@@ -18,8 +18,8 @@ tests:	init
 	pipenv run python3 -B -m unittest discover -s ${TOP_DIR}/tests/ -p '*_test.py'
 
 run:	init
-	@echo "Running installed_packages_diff..."; \
-	pipenv run python3 -B -m installed_packages_diff ${TOP_DIR}/config.yaml
+	@echo "Running ansible_vault_var..."; \
+	pipenv run python3 -B -m ansible_vault_var ${TOP_DIR}/config.yaml
 
 dist:   clean install_deps tests
 	@echo "Bulding dist..."; \
